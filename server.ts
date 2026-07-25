@@ -77,7 +77,7 @@ app.post('/api/chat', async (req, res) => {
     }
 
     if (!process.env.GEMINI_API_KEY) {
-      res.status(500).json({ error: 'GEMINI_API_KEY is not configured on the server.' });
+      res.status(500).json({ error: ''Gemini API key is not configured.'' });
       return;
     }
 
@@ -120,9 +120,9 @@ app.post('/api/tts', async (req, res) => {
     }
 
     if (!process.env.GEMINI_API_KEY) {
-      res.status(500).json({ error: 'GEMINI_API_KEY is not configured on the server.' });
-      return;
-    }
+  res.status(500).json({ error: 'Gemini API key is not configured.' });
+  return;
+}
 
     const selectedVoice = voiceName || 'Zephyr';
 
