@@ -1,0 +1,6 @@
+{
+  "name": "North Cyprus University Voice Advisor",
+  "description": "Conversational Gemini Live voice assistant for potential international students inquiring about university courses, tuition fees, scholarships, and admission in North Cyprus.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

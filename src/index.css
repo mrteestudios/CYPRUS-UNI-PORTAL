@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #071A2F;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Glassmorphism & Neon Glow Utilities */
+.glass-panel {
+  background: rgba(16, 42, 67, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+}
+
+.glass-panel-interactive {
+  background: rgba(16, 42, 67, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-interactive:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(0, 229, 255, 0.2), 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+/* Button CTA styling with Coral & Hover Cyan Glow */
+.btn-cta-coral {
+  background-color: #FF5A5F;
+  color: #FFFFFF;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(255, 90, 95, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cta-coral:hover {
+  transform: scale(1.03) translateY(-1px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6), 0 8px 25px rgba(255, 90, 95, 0.5);
+  background-color: #FF6B70;
+}
+
+/* Secondary Glass Button */
+.btn-glass-cyan {
+  background: rgba(0, 229, 255, 0.08);
+  color: #00E5FF;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-glass-cyan:hover {
+  background: rgba(0, 229, 255, 0.2);
+  border-color: #00E5FF;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1.5px rgba(0, 229, 255, 0.9);
+  color: transparent;
+}
+
+/* Aurora Gradient Backgrounds */
+@keyframes aurora-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) translate(20px, -20px);
+  }
+}
+
+.animate-aurora {
+  animation: aurora-pulse 10s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #071A2F;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.6);
+}
