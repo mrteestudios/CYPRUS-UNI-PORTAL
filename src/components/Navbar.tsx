@@ -33,6 +33,29 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header className="sticky top-0 z-40 bg-[#071A2F]/80 backdrop-blur-xl border-b border-white/10 text-white transition-all">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
           <div className="flex items-center justify-between py-4 sm:py-5">
+
+  {/* Left Side */}
+  <div
+    className="flex flex-col cursor-pointer group"
+    onClick={() => setActiveTab('overview')}
+  >
+    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#D1D5DB]/60 mb-0.5">
+      {t.portalTitle}
+    </span>
+
+    <div className="flex items-center space-x-2">
+      <h1 className="text-xl sm:text-2xl font-display font-bold tracking-tight text-white group-hover:text-[#00E5FF] transition-colors">
+        {t.brandName}
+      </h1>
+
+      <span className="text-[9px] uppercase font-bold tracking-widest bg-gradient-to-r from-[#00E5FF] to-[#8B5CF6] text-[#071A2F] px-2.5 py-0.5 rounded-full">
+        {t.voiceAiBadge}
+      </span>
+    </div>
+  </div>
+
+  {/* Right Side */}
+  <div className="flex items-center gap-4">
             {/* Brand Logo */}
             <div
               className="flex flex-col cursor-pointer group"
@@ -52,24 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             {/* Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-8 text-[11px] font-bold tracking-widest uppercase">
-              {navItems.map((item) => {
-                const isActive = activeTab === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    className={`pb-1 transition-all cursor-pointer ${
-                      isActive
-                        ? 'border-b-2 border-[#00E5FF] text-[#00E5FF] font-extrabold shadow-[0_4px_12px_rgba(0,229,255,0.3)]'
-                        : 'text-[#D1D5DB]/70 hover:text-white border-b-2 border-transparent'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                );
-              })}
-            </nav>
+            </div>
 
             {/* Action Area: Language Switcher, Voice Settings & Live Voice CTA */}
             <div className="flex items-center space-x-2 sm:space-x-3">
